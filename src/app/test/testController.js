@@ -18,7 +18,7 @@ module.exports.getMatch = (request, response) => {
 			let objArrValid = validation.validArrObj(body, paramObj, parameters[0]);
 
 			if (objArrValid) {
-				let rsValid = objArrValid * parameters[1];
+				let rsValid = Number(objArrValid) * parameters[1];
 
 				return responseManagement.customResponse(response, rsValid);
 			} else {
